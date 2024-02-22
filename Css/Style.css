@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --background-color: #131313;
+    --textColor : #ffff;
+    --mainColor : #C9F31D;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+body{
+    background-color: rgb(83, 117, 117);
+    /* background-color: var(background-color); */
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    background-color: var(--background-color);
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+    width: 158px;
+    height: 42px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    margin-left: 95px;
+}
+
+header ul li{
+    margin: 0px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 10px;
+    color:var(--textColor);
+}
+
+
+header ul li:hover{
+    color: var(--mainColor);
+    transition: 0.5s;
+    filter: drop-shadow(0 0 0.75rem var(--mainColor));
+}
+
+header nav h2{
+    padding-top: 7px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--textColor);
+    margin-right: 2 0px;
+    /* position: relative;
+    top: -10px; */
+}
+
+header nav h2 button{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: var(--mainColor);
+    border: none;
+    color: var(--textColor);
+    font-size: 16px;
+}
