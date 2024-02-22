@@ -4,7 +4,18 @@
     --background-color: #131313;
     --textColor : #ffff;
     --mainColor : #C9F31D;
+    --about : #9CB1B1;
+    --hederDown : #1F1F1F;
 }
+
+.color-change {
+    --background-color:#FFFF;
+    --textColor: #131313;
+    --mainColor: #C9F31D;
+    --about: #9CB1B1;
+    --hederDown: #FFFF;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +26,7 @@
 }
 
 body{
-    background-color: rgb(83, 117, 117);
+    background-color: var(--background-color);
     /* background-color: var(background-color); */
 }
 
@@ -23,8 +34,7 @@ header{
     position: fixed;
     width: 100%;
     padding: 20px;
-    backdrop-filter: blur(10px);
-    background-color: var(--background-color);
+    z-index: 1000;
 }
 
 header nav{
@@ -75,4 +85,215 @@ header nav h2 button{
     border: none;
     color: var(--textColor);
     font-size: 16px;
+}
+
+header.sticky{
+    transition: 1s;
+    background: var(--hederDown);
+}
+/* ------------------------------------------------- End Of Header ------------------------------------------------- */
+
+/* ------------------------------------------------- Start Of Home ------------------------------------------------- */
+
+.homePage{
+    display: flex;
+    position: relative;
+    top: 8vh;
+}
+
+.homePage h3{
+    font-size: 45px;
+    color : var(--textColor);
+    opacity: 34.9%;
+    font-weight: 500;
+}
+
+.homePage h1{
+    font-size: 65px;
+    font-weight: 600;
+    color: var(--mainColor);
+    letter-spacing: 6px;
+}
+
+.homePage h1 span{
+    color: var(--textColor);
+    font-weight: 500;
+    letter-spacing: 6px;
+}
+
+.homePage h4{
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--about);
+    letter-spacing: 3px;
+}
+
+.homePage .Dis div{
+    display: flex;
+}
+/*--------------------------------------------------hire btn-------------------------------------------------*/
+
+.hire{
+    margin-top: 10vh;
+    /* position: relative;
+    left: 440px;
+    bottom: 20px; */
+    background-color: transparent;
+    border:none;
+    box-shadow: none;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+}
+.hire span {
+    padding: 20px;
+    color: var(--textColor);
+    font-size: 17px;
+    background: var(--mainColor) ;
+    background: linear-gradient(0deg, var(--mainColor)  0%, var(--mainColor) 50%);
+    display: flex;
+    line-height: 1;
+    position: absolute;
+    width: 150px;
+    height: 54px;
+    justify-content: center;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    border-radius: 5px;
+    margin:0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .hire span:nth-child(1) {
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+  }
+  .hire span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+  }
+  .hire:hover span:nth-child(1) {
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  .hire:hover span:nth-child(2) {
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+   color: transparent;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+  
+
+/*--------------------------------------------------hire btn end-------------------------------------------------*/
+
+/*--------------------------------------------------Downlode CV-------------------------------------------------*/
+
+.homePage .Dis .cv {
+    margin-top: 10vh;
+    margin-left: 4vh;
+    position: relative;
+    top: 2vh;
+    left: 8vh;
+    width: 228px;
+    height: 57px;
+    line-height: 42px; 
+    padding: 0;
+    font-size: 17px;
+    border: none;
+    background: transparent;
+    background: linear-gradient(transparent);
+    overflow: hidden; /* Ensure overflow is hidden to hide the pseudo-elements */
+    color: var(--textColor); /* Text color */
+    cursor: pointer;
+}
+
+.homePage .Dis .cv::before,
+.homePage .Dis .cv::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Adjusted height */
+    background: var(--mainColor);
+    transition: width 0.8s ease; /* Adjusted transition duration */
+}
+
+.homePage .Dis .cv::before {
+    top: 0;
+    left: 0;
+}
+
+.homePage .Dis .cv::after {
+    bottom: 0;
+    right: 0;
+}
+
+.homePage .Dis .cv:hover::before,
+.homePage .Dis .cv:hover::after {
+    width: 100%; /* Expand to 100% on hover */
+}
+
+/*--------------------------------------------------Downlode CV end-------------------------------------------------*/
+
+.homePage img{
+    position: relative;
+    bottom: 71vh;
+    width: 101vh;
+    left: 92vh;
+    height: auto;
+}
+
+.homePage .Dis{
+    position: relative;
+    top: 19vh;
+    left: 8vh;
+}
+
+.setting{
+    width: 80px;
+    position: fixed;
+    left: 0vh;
+    top: 8.5vh;
+    z-index: 900;
+}
+
+.setting img{
+    width: 80px;
+    height: auto;
+    background: #232222;
+}
+.setting button{
+    background: transparent;
+    border: none;
+}
+.setting button:hover{
+    background: var(--mainColor);
+    transition: 0.5s;
 }
